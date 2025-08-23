@@ -16,19 +16,18 @@ build:
 
 requirements:
   host:
-    - python
-    - pip
+    - python {{ python_min }}
   run:
-    - sagemaker-python-sdk =={{ version }}
+    - python >={{ python_min }}
+    - sagemaker-python-sdk {{ version }}
 
 test:
   imports:
     - sagemaker
   commands:
-    - pip check
     - sagemaker-upgrade-v2 --help
   requires:
-    - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/aws/sagemaker-python-sdk/
