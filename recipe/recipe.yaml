@@ -3,7 +3,7 @@ context:
   version: 3.5.0
 
 package:
-  name: ${{ name | lower }}
+  name: ${{ name }}
   version: ${{ version }}
 
 source:
@@ -30,7 +30,7 @@ tests:
       - sagemaker-upgrade-v2 --help
     requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
 
 about:
   homepage: https://github.com/aws/sagemaker-python-sdk/
