@@ -26,11 +26,7 @@ tests:
   - python:
       imports:
         - sagemaker
-  - script:
-      - sagemaker-upgrade-v2 --help
-    requirements:
-      run:
-        - python ${{ python_min }}.*
+        - sagemaker.train
 
 about:
   homepage: https://github.com/aws/sagemaker-python-sdk/
