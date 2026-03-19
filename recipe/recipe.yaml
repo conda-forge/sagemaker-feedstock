@@ -1,0 +1,44 @@
+context:
+  name: sagemaker
+  version: 3.5.0
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sagemaker-${{ version }}.tar.gz
+  sha256: da63b8e16e58362dbacdec9c843d5838b9a9af83ac21be1d26cd7f24ddf81873
+
+build:
+  noarch: python
+  script: echo "[sagemaker-feedstock] intentionally not including any files"
+  number: 0
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+  run:
+    - python >=${{ python_min }}
+    - sagemaker-python-sdk ==${{ version }}
+
+tests:
+  - python:
+      python_version: ${{ python_min }}.*
+      imports:
+        - sagemaker
+        - sagemaker.train
+
+about:
+  homepage: https://github.com/aws/sagemaker-python-sdk/
+  license: Apache-2.0
+  license_family: APACHE
+  license_file: LICENSE
+  summary: Open source library for training and deploying models on Amazon SageMaker.
+  documentation: https://sagemaker.readthedocs.io/en/stable/
+  repository: https://github.com/aws/sagemaker-python-sdk/
+
+extra:
+  recipe-maintainers:
+    - jameslamb
+    - raybellwaves
