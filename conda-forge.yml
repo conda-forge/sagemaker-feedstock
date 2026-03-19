@@ -4,4 +4,6 @@ bot:
 github:
   branch_name: main
   tooling_branch_name: main
-build_tool: rattler-build
+conda_build:
+  pkg_format: '2'
+conda_build_tool: rattler-build
