@@ -12,8 +12,7 @@ source:
 
 build:
   noarch: python
-  script: |
-    cp $SRCDIR echo "[sagemaker-feedstock] intentionally not including any files"
+  script: echo "[sagemaker-feedstock] intentionally not including any files"
   number: 0
 
 requirements:
