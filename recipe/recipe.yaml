@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
   run:
     - python >=${{ python_min }}
-    - sagemaker-python-sdk ${{ version }}
+    - sagemaker-python-sdk ==${{ version }}
 
 tests:
   - python:
@@ -35,6 +35,7 @@ tests:
 about:
   homepage: https://github.com/aws/sagemaker-python-sdk/
   license: Apache-2.0
+  license_family: APACHE
   license_file: LICENSE.txt
   summary: Open source library for training and deploying models on Amazon SageMaker.
   documentation: https://sagemaker.readthedocs.io/en/stable/
