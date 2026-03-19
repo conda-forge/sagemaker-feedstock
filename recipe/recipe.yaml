@@ -12,7 +12,8 @@ source:
 
 build:
   noarch: python
-  script: echo "[sagemaker-feedstock] intentionally not including any files"
+  script: |
+    cp $SRCDIR echo "[sagemaker-feedstock] intentionally not including any files"
   number: 0
 
 requirements:
@@ -36,7 +37,7 @@ about:
   homepage: https://github.com/aws/sagemaker-python-sdk/
   license: Apache-2.0
   license_family: APACHE
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: Open source library for training and deploying models on Amazon SageMaker.
   documentation: https://sagemaker.readthedocs.io/en/stable/
   repository: https://github.com/aws/sagemaker-python-sdk/
