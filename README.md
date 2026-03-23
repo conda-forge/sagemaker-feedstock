@@ -147,5 +147,6 @@ Feedstock Maintainers
 =====================
 
 * [@jameslamb](https://github.com/jameslamb/)
+* [@mollyheamazon](https://github.com/mollyheamazon/)
 * [@raybellwaves](https://github.com/raybellwaves/)
 
