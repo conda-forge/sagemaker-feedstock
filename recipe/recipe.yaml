@@ -1,6 +1,6 @@
 context:
   name: sagemaker
-  version: "3.6.0"
+  version: "3.7.0"
 
 package:
   name: ${{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sagemaker-${{ version }}.tar.gz
-  sha256: 7c4d8c66a495dd1183f353de86431d0870cbcf45e19287f48a09ea6f2affca2d
+  sha256: e8c2e501b9022422d92d708182b02c2fad2b5b9194719d4c3f876da610e174fa
 
 build:
   noarch: python
